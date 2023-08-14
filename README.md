@@ -133,4 +133,17 @@ Variables associated with the configuration of aws are:
 | cluster_name | name of the cluster to be created| string | eks-cluster| no | 
 
 
+### Deploying a cluster
+
+1. First please make sure you have necessary providers cofigured by running:
+
+```
+terraform init
+```
+
+2. In order to deploy a cluster from this root module, make sure you have specified the required arguments and also optional arguments, if modified, in ```example/admin.tfvars``` file and the run the command:
+
+```
+terraform apply -var-file="example/admin.tfvars"
+```
 
