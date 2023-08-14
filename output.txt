@@ -1,0 +1,206 @@
+NAMESPACE     NAME                                          READY   STATUS              RESTARTS        AGE   IP           NODE                         NOMINATED NODE   READINESS GATES
+hpcc          dfs-74cdbb56b8-9c5z4                          0/1     ContainerCreating   0               13m   <none>       ip-10-0-3-234.ec2.internal   <none>           <none>
+hpcc          dfuserver-69df9b8954-g5lrc                    0/1     ContainerCreating   0               13m   <none>       ip-10-0-3-241.ec2.internal   <none>           <none>
+hpcc          eclqueries-5fb7b88485-cbq2j                   0/1     ContainerCreating   0               13m   <none>       ip-10-0-3-180.ec2.internal   <none>           <none>
+hpcc          eclscheduler-77d4579577-sw4cn                 0/1     Running             2 (2m46s ago)   13m   10.0.3.195   ip-10-0-3-180.ec2.internal   <none>           <none>
+hpcc          eclservices-57f4cff795-mdcng                  0/1     ContainerCreating   0               13m   <none>       ip-10-0-3-241.ec2.internal   <none>           <none>
+hpcc          eclwatch-5765fc5b6f-kmcv5                     0/1     ContainerCreating   0               13m   <none>       ip-10-0-3-180.ec2.internal   <none>           <none>
+hpcc          esdl-sandbox-f7dfbfcc5-77f2b                  0/1     ContainerCreating   0               13m   <none>       ip-10-0-3-234.ec2.internal   <none>           <none>
+hpcc          hthor-5c6f94b6d7-vcww5                        0/1     ContainerCreating   0               13m   <none>       ip-10-0-3-241.ec2.internal   <none>           <none>
+hpcc          mydali-5b49bc6dbb-2rmpk                       1/2     CrashLoopBackOff    7 (109s ago)    13m   10.0.3.181   ip-10-0-3-180.ec2.internal   <none>           <none>
+hpcc          myeclccserver-784d56c44f-gq8zb                0/1     Running             2 (2m54s ago)   13m   10.0.3.253   ip-10-0-3-47.ec2.internal    <none>           <none>
+hpcc          roxie-agent-1-854c5b78bc-kcbl8                0/1     ContainerCreating   0               13m   <none>       ip-10-0-3-234.ec2.internal   <none>           <none>
+hpcc          roxie-agent-1-854c5b78bc-q2bg9                0/1     ContainerCreating   0               13m   <none>       ip-10-0-3-241.ec2.internal   <none>           <none>
+hpcc          roxie-agent-2-7f9dcb596d-64t2p                0/1     ContainerCreating   0               13m   <none>       ip-10-0-3-234.ec2.internal   <none>           <none>
+hpcc          roxie-agent-2-7f9dcb596d-dnt4j                0/1     ContainerCreating   0               13m   <none>       ip-10-0-3-180.ec2.internal   <none>           <none>
+hpcc          roxie-toposerver-779c94db4d-gqbwv             1/1     Running             0               13m   10.0.3.15    ip-10-0-3-234.ec2.internal   <none>           <none>
+hpcc          roxie-workunit-86488587fd-2t29k               0/1     ContainerCreating   0               13m   <none>       ip-10-0-3-234.ec2.internal   <none>           <none>
+hpcc          sasha-dfurecovery-archiver-6f6fc7d5bb-7lbbx   0/1     Running             2 (2m57s ago)   13m   10.0.3.118   ip-10-0-3-241.ec2.internal   <none>           <none>
+hpcc          sasha-dfuwu-archiver-97c4c9955-2tx8c          0/1     Running             2 (2m49s ago)   13m   10.0.3.231   ip-10-0-3-180.ec2.internal   <none>           <none>
+hpcc          sasha-file-expiry-7f498669dd-9nvzf            0/1     Running             2 (2m48s ago)   13m   10.0.3.168   ip-10-0-3-180.ec2.internal   <none>           <none>
+hpcc          sasha-wu-archiver-6747f7b54c-77p8t            0/1     ContainerCreating   0               13m   <none>       ip-10-0-3-241.ec2.internal   <none>           <none>
+hpcc          spray-service-7ff8bd884f-8z4f8                0/1     ContainerCreating   0               13m   <none>       ip-10-0-3-180.ec2.internal   <none>           <none>
+hpcc          sql2ecl-5c5b84c4cc-jfzr8                      0/1     ContainerCreating   0               13m   <none>       ip-10-0-3-234.ec2.internal   <none>           <none>
+hpcc          thor-eclagent-5c7fc7649d-k2gqh                0/1     ContainerCreating   0               13m   <none>       ip-10-0-3-234.ec2.internal   <none>           <none>
+hpcc          thor-thoragent-844745d485-xjgk4               0/1     ContainerCreating   0               13m   <none>       ip-10-0-3-234.ec2.internal   <none>           <none>
+kube-system   aws-node-8ncp4                                1/1     Running             0               34m   10.0.3.180   ip-10-0-3-180.ec2.internal   <none>           <none>
+kube-system   aws-node-f9hlf                                1/1     Running             0               34m   10.0.3.234   ip-10-0-3-234.ec2.internal   <none>           <none>
+kube-system   aws-node-j2ttb                                1/1     Running             0               34m   10.0.3.47    ip-10-0-3-47.ec2.internal    <none>           <none>
+kube-system   aws-node-mvpnp                                1/1     Running             0               34m   10.0.3.241   ip-10-0-3-241.ec2.internal   <none>           <none>
+kube-system   coredns-7975d6fb9b-5n7jx                      1/1     Running             0               39m   10.0.3.220   ip-10-0-3-47.ec2.internal    <none>           <none>
+kube-system   coredns-7975d6fb9b-bqqmx                      1/1     Running             0               39m   10.0.3.152   ip-10-0-3-47.ec2.internal    <none>           <none>
+kube-system   efs-csi-controller-67674f4c66-f6hw6           3/3     Running             0               36m   10.0.3.132   ip-10-0-3-47.ec2.internal    <none>           <none>
+kube-system   efs-csi-controller-67674f4c66-rll8b           3/3     Running             0               36m   10.0.3.203   ip-10-0-3-47.ec2.internal    <none>           <none>
+kube-system   efs-csi-node-7k9kr                            3/3     Running             0               34m   10.0.3.241   ip-10-0-3-241.ec2.internal   <none>           <none>
+kube-system   efs-csi-node-t96lm                            3/3     Running             0               34m   10.0.3.234   ip-10-0-3-234.ec2.internal   <none>           <none>
+kube-system   efs-csi-node-vlrk7                            3/3     Running             0               34m   10.0.3.47    ip-10-0-3-47.ec2.internal    <none>           <none>
+kube-system   efs-csi-node-wjt4r                            3/3     Running             0               34m   10.0.3.180   ip-10-0-3-180.ec2.internal   <none>           <none>
+kube-system   kube-proxy-45k9v                              1/1     Running             0               34m   10.0.3.180   ip-10-0-3-180.ec2.internal   <none>           <none>
+kube-system   kube-proxy-cl8m6                              1/1     Running             0               34m   10.0.3.234   ip-10-0-3-234.ec2.internal   <none>           <none>
+kube-system   kube-proxy-fzwv9                              1/1     Running             0               34m   10.0.3.241   ip-10-0-3-241.ec2.internal   <none>           <none>
+kube-system   kube-proxy-z78zm                              1/1     Running             0               34m   10.0.3.47    ip-10-0-3-47.ec2.internal    <none>           <none>
+NAME              ATTACHREQUIRED   PODINFOONMOUNT   STORAGECAPACITY   TOKENREQUESTS   REQUIRESREPUBLISH   MODES        AGE
+efs.csi.aws.com   false            false            false             <unset>         false               Persistent   39m
+W0814 12:29:59.713865       1 feature_gate.go:241] Setting GA feature gate Topology=true. It will be removed in a future release.
+I0814 12:29:59.713912       1 feature_gate.go:249] feature gates: &{map[Topology:true]}
+I0814 12:29:59.713940       1 csi-provisioner.go:154] Version: v3.5.0
+I0814 12:29:59.713949       1 csi-provisioner.go:177] Building kube configs for running in cluster...
+I0814 12:29:59.718424       1 common.go:111] Probing CSI driver for readiness
+I0814 12:29:59.744364       1 csi-provisioner.go:230] Detected CSI driver efs.csi.aws.com
+I0814 12:29:59.760699       1 csi-provisioner.go:302] CSI driver does not support PUBLISH_UNPUBLISH_VOLUME, not watching VolumeAttachments
+I0814 12:29:59.761684       1 controller.go:732] Using saving PVs to API server in background
+I0814 12:29:59.762144       1 leaderelection.go:245] attempting to acquire leader lease kube-system/efs-csi-aws-com...
+I0814 12:29:59.814808       1 leaderelection.go:255] successfully acquired lease kube-system/efs-csi-aws-com
+I0814 12:29:59.815595       1 leader_election.go:178] became leader, starting
+I0814 12:29:59.919570       1 controller.go:811] Starting provisioner controller efs.csi.aws.com_efs-csi-controller-67674f4c66-f6hw6_122f92a0-4b80-47a4-8e08-59507097b4b1!
+I0814 12:29:59.919656       1 volume_store.go:97] Starting save volume queue
+I0814 12:30:00.021418       1 controller.go:860] Started provisioner controller efs.csi.aws.com_efs-csi-controller-67674f4c66-f6hw6_122f92a0-4b80-47a4-8e08-59507097b4b1!
+W0814 12:29:59.689889       1 feature_gate.go:241] Setting GA feature gate Topology=true. It will be removed in a future release.
+I0814 12:29:59.689956       1 feature_gate.go:249] feature gates: &{map[Topology:true]}
+I0814 12:29:59.689981       1 csi-provisioner.go:154] Version: v3.5.0
+I0814 12:29:59.689990       1 csi-provisioner.go:177] Building kube configs for running in cluster...
+I0814 12:29:59.746073       1 common.go:111] Probing CSI driver for readiness
+I0814 12:29:59.771861       1 csi-provisioner.go:230] Detected CSI driver efs.csi.aws.com
+I0814 12:29:59.774010       1 csi-provisioner.go:302] CSI driver does not support PUBLISH_UNPUBLISH_VOLUME, not watching VolumeAttachments
+I0814 12:29:59.774407       1 controller.go:732] Using saving PVs to API server in background
+I0814 12:29:59.774735       1 leaderelection.go:245] attempting to acquire leader lease kube-system/efs-csi-aws-com...
+I0814 12:29:56.351025       1 config_dir.go:63] Mounted directories do not exist, creating directory at '/etc/amazon/efs'
+I0814 12:29:56.352555       1 metadata.go:63] getting MetadataService...
+I0814 12:29:56.355046       1 metadata.go:68] retrieving metadata from EC2 metadata service
+I0814 12:29:56.356034       1 driver.go:140] Did not find any input tags.
+I0814 12:29:56.356232       1 driver.go:113] Registering Node Server
+I0814 12:29:56.356243       1 driver.go:115] Registering Controller Server
+I0814 12:29:56.356256       1 driver.go:118] Starting efs-utils watchdog
+I0814 12:29:56.356340       1 efs_watch_dog.go:216] Copying /etc/amazon/efs/efs-utils.conf since it doesn't exist
+I0814 12:29:56.356439       1 efs_watch_dog.go:216] Copying /etc/amazon/efs/efs-utils.crt since it doesn't exist
+I0814 12:29:56.357825       1 driver.go:124] Starting reaper
+I0814 12:29:56.357842       1 driver.go:127] Listening for connections on address: &net.UnixAddr{Name:"/var/lib/csi/sockets/pluginproxy/csi.sock", Net:"unix"}
+I0814 12:29:56.497777       1 config_dir.go:63] Mounted directories do not exist, creating directory at '/etc/amazon/efs'
+I0814 12:29:56.509282       1 metadata.go:63] getting MetadataService...
+I0814 12:29:56.522430       1 metadata.go:68] retrieving metadata from EC2 metadata service
+I0814 12:29:56.530917       1 driver.go:140] Did not find any input tags.
+I0814 12:29:56.531138       1 driver.go:113] Registering Node Server
+I0814 12:29:56.531149       1 driver.go:115] Registering Controller Server
+I0814 12:29:56.531162       1 driver.go:118] Starting efs-utils watchdog
+I0814 12:29:56.531236       1 efs_watch_dog.go:216] Copying /etc/amazon/efs/efs-utils.conf since it doesn't exist
+I0814 12:29:56.531334       1 efs_watch_dog.go:216] Copying /etc/amazon/efs/efs-utils.crt since it doesn't exist
+I0814 12:29:56.532470       1 driver.go:124] Starting reaper
+I0814 12:29:56.532512       1 driver.go:127] Listening for connections on address: &net.UnixAddr{Name:"/var/lib/csi/sockets/pluginproxy/csi.sock", Net:"unix"}
+I0814 12:29:59.040447       1 config_dir.go:88] Creating symlink from '/etc/amazon/efs' to '/var/amazon/efs'
+I0814 12:29:59.042159       1 metadata.go:63] getting MetadataService...
+I0814 12:29:59.044216       1 metadata.go:68] retrieving metadata from EC2 metadata service
+I0814 12:29:59.045619       1 driver.go:140] Did not find any input tags.
+I0814 12:29:59.045971       1 driver.go:113] Registering Node Server
+I0814 12:29:59.045988       1 driver.go:115] Registering Controller Server
+I0814 12:29:59.046010       1 driver.go:118] Starting efs-utils watchdog
+I0814 12:29:59.046111       1 efs_watch_dog.go:216] Copying /etc/amazon/efs/efs-utils.conf since it doesn't exist
+I0814 12:29:59.046245       1 efs_watch_dog.go:216] Copying /etc/amazon/efs/efs-utils.crt since it doesn't exist
+I0814 12:29:59.047685       1 driver.go:124] Starting reaper
+I0814 12:29:59.047701       1 driver.go:127] Listening for connections on address: &net.UnixAddr{Name:"/csi/csi.sock", Net:"unix"}
+I0814 12:29:56.033694       1 config_dir.go:88] Creating symlink from '/etc/amazon/efs' to '/var/amazon/efs'
+I0814 12:29:56.040816       1 metadata.go:63] getting MetadataService...
+I0814 12:29:56.044341       1 metadata.go:68] retrieving metadata from EC2 metadata service
+I0814 12:29:56.045723       1 driver.go:140] Did not find any input tags.
+I0814 12:29:56.046014       1 driver.go:113] Registering Node Server
+I0814 12:29:56.046046       1 driver.go:115] Registering Controller Server
+I0814 12:29:56.046064       1 driver.go:118] Starting efs-utils watchdog
+I0814 12:29:56.046172       1 efs_watch_dog.go:216] Copying /etc/amazon/efs/efs-utils.conf since it doesn't exist
+I0814 12:29:56.046314       1 efs_watch_dog.go:216] Copying /etc/amazon/efs/efs-utils.crt since it doesn't exist
+I0814 12:29:56.047490       1 driver.go:124] Starting reaper
+I0814 12:29:56.047502       1 driver.go:127] Listening for connections on address: &net.UnixAddr{Name:"/csi/csi.sock", Net:"unix"}
+I0814 12:30:01.292923       1 main.go:167] Version: v2.8.0
+I0814 12:30:01.293512       1 main.go:168] Running node-driver-registrar in mode=registration
+I0814 12:30:01.295052       1 main.go:192] Attempting to open a gRPC connection with: "/csi/csi.sock"
+I0814 12:30:01.302230       1 main.go:199] Calling CSI driver to discover driver name
+I0814 12:30:01.318713       1 main.go:209] CSI driver name: "efs.csi.aws.com"
+I0814 12:30:01.318757       1 node_register.go:53] Starting Registration Server at: /registration/efs.csi.aws.com-reg.sock
+I0814 12:30:01.319336       1 node_register.go:62] Registration Server started at: /registration/efs.csi.aws.com-reg.sock
+I0814 12:30:01.320036       1 node_register.go:92] Skipping HTTP server because endpoint is set to: ""
+I0814 12:30:01.429258       1 main.go:102] Received GetInfo call: &InfoRequest{}
+E0814 12:30:01.429393       1 main.go:107] "Failed to create registration probe file" err="mkdir /var/lib/kubelet: read-only file system" registrationProbePath="/var/lib/kubelet/plugins/efs.csi.aws.com/registration"
+I0814 12:30:01.474219       1 main.go:121] Received NotifyRegistrationStatus call: &RegistrationStatus{PluginRegistered:true,Error:,}
+I0814 12:29:57.695162       1 main.go:167] Version: v2.8.0
+I0814 12:29:57.695226       1 main.go:168] Running node-driver-registrar in mode=registration
+I0814 12:29:57.695652       1 main.go:192] Attempting to open a gRPC connection with: "/csi/csi.sock"
+I0814 12:29:57.696748       1 main.go:199] Calling CSI driver to discover driver name
+I0814 12:29:57.702220       1 main.go:209] CSI driver name: "efs.csi.aws.com"
+I0814 12:29:57.702263       1 node_register.go:53] Starting Registration Server at: /registration/efs.csi.aws.com-reg.sock
+I0814 12:29:57.702443       1 node_register.go:62] Registration Server started at: /registration/efs.csi.aws.com-reg.sock
+I0814 12:29:57.702613       1 node_register.go:92] Skipping HTTP server because endpoint is set to: ""
+I0814 12:29:58.065535       1 main.go:102] Received GetInfo call: &InfoRequest{}
+E0814 12:29:58.065610       1 main.go:107] "Failed to create registration probe file" err="mkdir /var/lib/kubelet: read-only file system" registrationProbePath="/var/lib/kubelet/plugins/efs.csi.aws.com/registration"
+I0814 12:29:58.092736       1 main.go:121] Received NotifyRegistrationStatus call: &RegistrationStatus{PluginRegistered:true,Error:,}
+NAME                                 STATUS   VOLUME                              CAPACITY   ACCESS MODES   STORAGECLASS   AGE
+dali-awsstorage-hpcc-efs-pvc         Bound    dali-awsstorage-hpcc-efs-pv         1Gi        RWO            awsstorage     27m
+data-awsstorage-hpcc-efs-pvc         Bound    data-awsstorage-hpcc-efs-pv         3Gi        RWX            awsstorage     27m
+dll-awsstorage-hpcc-efs-pvc          Bound    dll-awsstorage-hpcc-efs-pv          1Gi        RWX            awsstorage     27m
+mydropzone-awsstorage-hpcc-efs-pvc   Bound    mydropzone-awsstorage-hpcc-efs-pv   1Gi        RWX            awsstorage     27m
+sasha-awsstorage-hpcc-efs-pvc        Bound    sasha-awsstorage-hpcc-efs-pv        1Gi        RWX            awsstorage     27m
+Name:          dali-awsstorage-hpcc-efs-pvc
+Namespace:     hpcc
+StorageClass:  awsstorage
+Status:        Bound
+Volume:        dali-awsstorage-hpcc-efs-pv
+Labels:        <none>
+Annotations:   pv.kubernetes.io/bind-completed: yes
+Finalizers:    [kubernetes.io/pvc-protection]
+Capacity:      1Gi
+Access Modes:  RWO
+VolumeMode:    Filesystem
+Used By:       mydali-5b49bc6dbb-bm9vl
+Events:        <none>
+NAME               SECRETS   AGE
+default            0         28m
+hpcc-agent         0         38s
+hpcc-dali          0         38s
+hpcc-default       0         38s
+hpcc-esp-service   0         38s
+hpcc-thoragent     0         38s
+NAME                                 SECRETS   AGE
+attachdetach-controller              0         54m
+aws-cloud-provider                   0         54m
+aws-node                             0         54m
+certificate-controller               0         54m
+clusterrole-aggregation-controller   0         54m
+coredns                              0         54m
+cronjob-controller                   0         54m
+daemon-set-controller                0         54m
+default                              0         54m
+deployment-controller                0         54m
+disruption-controller                0         54m
+efs-csi-controller-sa                0         51m
+efs-csi-node-sa                      0         51m
+eks-vpc-resource-controller          0         54m
+endpoint-controller                  0         54m
+endpointslice-controller             0         54m
+endpointslicemirroring-controller    0         54m
+ephemeral-volume-controller          0         54m
+expand-controller                    0         54m
+generic-garbage-collector            0         54m
+horizontal-pod-autoscaler            0         54m
+job-controller                       0         54m
+kube-proxy                           0         54m
+namespace-controller                 0         54m
+node-controller                      0         54m
+persistent-volume-binder             0         54m
+pod-garbage-collector                0         54m
+pv-protection-controller             0         54m
+pvc-protection-controller            0         54m
+replicaset-controller                0         54m
+replication-controller               0         54m
+resourcequota-controller             0         54m
+root-ca-cert-publisher               0         54m
+service-account-controller           0         54m
+service-controller                   0         54m
+statefulset-controller               0         54m
+tagging-controller                   0         54m
+ttl-after-finished-controller        0         54m
+ttl-controller                       0         54m
+Name:                efs-csi-controller-sa
+Namespace:           kube-system
+Labels:              app.kubernetes.io/name=aws-efs-csi-driver
+Annotations:         <none>
+Image pull secrets:  <none>
+Mountable secrets:   <none>
+Tokens:              <none>
+Events:              <none>
