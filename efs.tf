@@ -9,7 +9,7 @@ resource "aws_efs_mount_target" "efs_target" {
     aws_efs_file_system.efs
   ]
   file_system_id = aws_efs_file_system.efs.id
-  for_each       = toset(flatten(module.aws_vpc.private_subnets_id))
+  for_each       = try(toset(flatten(module.aws_vpc.private_subnets_id)), [])
   subnet_id      = each.key
   #subnet_id       = module.aws_vpc.private_subnets_id[0][0]
   security_groups = flatten([aws_security_group.efs.id, module.aws_vpc.security_groups_id])

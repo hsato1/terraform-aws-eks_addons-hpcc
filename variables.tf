@@ -5,7 +5,7 @@ variable "path" {
 
 variable "profile" {
   type    = string
-  default = "ida-cloud-ops"
+  #default = "ida-cloud-ops"
 }
 
 
