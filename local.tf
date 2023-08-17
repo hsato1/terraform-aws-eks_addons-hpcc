@@ -124,6 +124,7 @@ locals {
 }
 
 locals {
-    planes = flatten(yamldecode(file("static-pv.yaml"))["planes"])
-    
+
+  # commons = yamldecode(file("./example/values.yaml.tftpl"))["common"]
+  planes = flatten(yamldecode(file("./example/values.yaml"))["planes"])
 }

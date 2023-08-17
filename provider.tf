@@ -1,3 +1,12 @@
+terraform {
+  required_providers {
+    kubectl = {
+      source  = "gavinbunney/kubectl"
+      version = "1.14.0"
+    }
+  }
+}
+
 provider "aws" {
   region                   = "us-east-1"
   shared_config_files      = [local.config_path]
@@ -15,6 +24,13 @@ provider "kubernetes" {
   token                  = data.aws_eks_cluster_auth.this.token
 }
 
+provider "kubectl" {
+  host                   = aws_eks_cluster.eks-cluster.endpoint
+  cluster_ca_certificate = base64decode(aws_eks_cluster.eks-cluster.certificate_authority.0.data)
+  token                  = data.aws_eks_cluster_auth.this.token
+  load_config_file       = false
+}
+
 provider "helm" {
 
   kubernetes {
@@ -24,6 +40,7 @@ provider "helm" {
   }
 
 }
+
 
 module "eks-kubeconfig" {
   source  = "hyperbadger/eks-kubeconfig/aws"

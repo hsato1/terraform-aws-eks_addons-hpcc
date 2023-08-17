@@ -28,21 +28,21 @@ resource "aws_eks_addon" "coredns" {
 
 resource "aws_eks_node_group" "node-ec2" {
   cluster_name    = aws_eks_cluster.eks-cluster.name
-  node_group_name = "t3_medium-node_group"
+  node_group_name = var.ec2-node.node_group_name
   node_role_arn   = aws_iam_role.NodeGroupRole.arn
   subnet_ids      = flatten(module.aws_vpc.private_subnets_id)
 
   scaling_config {
-    desired_size = 4
-    max_size     = 8
-    min_size     = 4
+    desired_size = var.ec2-node.scaling_config_desired_size
+    max_size     = var.ec2-node.scaling_config_max_size
+    min_size     = var.ec2-node.scaling_config_min_size
   }
 
 
-  ami_type       = "AL2_x86_64"
-  instance_types = ["t3.medium"]
-  capacity_type  = "ON_DEMAND"
-  disk_size      = 20
+  ami_type       = var.ec2-node.ami_type
+  instance_types = var.ec2-node.instance_types
+  capacity_type  = var.ec2-node.capacity_type
+  disk_size      = var.ec2-node.disk_size
 
   depends_on = [
     aws_iam_role_policy_attachment.AmazonEKSWorkerNodePolicy,
