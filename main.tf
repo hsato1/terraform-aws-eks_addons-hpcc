@@ -4,7 +4,7 @@ module "aws_vpc" {
   security_groups = var.security_groups
 }
 
-module "AWS_EKS" {
+module "aws_eks" {
   source = "./aws_eks"
   aws_vpc_public_subnets_id = module.aws_vpc.public_subnets_id
   aws_vpc_private_subnets_id = module.aws_vpc.private_subnets_id

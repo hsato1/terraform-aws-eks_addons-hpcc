@@ -13,5 +13,5 @@
 # !example_override.tf
 .terraform.*.hcl
 .md
-*/.vscode/*
-kubeconfig_eks-cluster
+#*/.vscode/*
+#kubeconfig_eks-cluster

@@ -1,17 +1,3 @@
-variable "path" {
-  type    = string
-  default = "/Users/satouhiroshiki/.aws"
-}
-
-variable "profile" {
-  type = string
-  #default = "ida-cloud-ops"
-}
-variable "namespace" {
-  type    = string
-  default = "hpcc"
-}
-
 variable "admin" {
   description = "Information for the user who administers the deployment."
   type = object({
@@ -29,6 +15,15 @@ variable "admin" {
 }
 
 
+variable "chart_path" {
+  type = string
+
+}
+
+variable "cluster_name" {
+  type    = string
+  default = "eks-cluster"
+}
 variable "ec2-node" {
   description = "variable for ec2 node group"
   type = object({
@@ -52,28 +47,22 @@ variable "ec2-node" {
     disk_size                   = 20
   }
 }
-variable "tags" {
-  description = "Additional resource tags."
-  type        = map(string)
 
-  default = {
-    "description" = "Testing"
-  }
+variable "efs_token" {
+  type    = string
+  default = "main"
 }
-
 
 variable "kubeconfig_name" {
   type    = string
   default = "cluster-name"
 }
-variable "cluster_name" {
+
+variable "namespace" {
   type    = string
-  default = "eks-cluster"
+  default = "hpcc"
 }
-variable "region" {
-  type    = string
-  default = "us-east-1"
-}
+
 variable "networking" {
   type = object({
     cidr_block      = string
@@ -151,9 +140,32 @@ variable "security_groups" {
 }
 
 
-
-### EFS related variables
-variable "efs_token" {
+variable "path" {
   type    = string
-  default = "main"
+  default = "/Users/satouhiroshiki/.aws"
 }
+
+variable "profile" {
+  type = string
+  #default = "ida-cloud-ops"
+}
+
+
+
+variable "region" {
+  type    = string
+  default = "us-east-1"
+}
+
+variable "tags" {
+  description = "Additional resource tags."
+  type        = map(string)
+
+  default = {
+    "description" = "Testing"
+  }
+}
+
+
+
+
