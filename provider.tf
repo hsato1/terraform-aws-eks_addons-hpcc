@@ -15,28 +15,29 @@ provider "aws" {
 }
 
 data "aws_eks_cluster_auth" "this" {
-  name = aws_eks_cluster.eks-cluster.id
+  name = module.AWS_EKS.cluster_id
 }
 
 provider "kubernetes" {
-  host                   = aws_eks_cluster.eks-cluster.endpoint
-  cluster_ca_certificate = base64decode(aws_eks_cluster.eks-cluster.certificate_authority.0.data)
+  host                   = module.AWS_EKS.endpoint
+  cluster_ca_certificate = base64decode(module.AWS_EKS.certificate_authority.0.data)
   token                  = data.aws_eks_cluster_auth.this.token
+  # load_config_file       = false
 }
 
-provider "kubectl" {
-  host                   = aws_eks_cluster.eks-cluster.endpoint
-  cluster_ca_certificate = base64decode(aws_eks_cluster.eks-cluster.certificate_authority.0.data)
-  token                  = data.aws_eks_cluster_auth.this.token
-  load_config_file       = false
-}
+# provider "kubectl" {
+#   host                   =module.AWS_EKS.endpoint
+#   cluster_ca_certificate = base64decode(module.AWS_EKS.certificate_authority.0.data)
+#   token                  = data.aws_eks_cluster_auth.this.token
+#   load_config_file       = false
+# }
 
 provider "helm" {
 
   kubernetes {
-    host                   = aws_eks_cluster.eks-cluster.endpoint
-    cluster_ca_certificate = base64decode(aws_eks_cluster.eks-cluster.certificate_authority.0.data)
-    token                  = data.aws_eks_cluster_auth.this.token
+   host                   =module.AWS_EKS.endpoint
+  cluster_ca_certificate = base64decode(module.AWS_EKS.certificate_authority.0.data)
+  token                  = data.aws_eks_cluster_auth.this.token
   }
 
 }
@@ -47,13 +48,14 @@ module "eks-kubeconfig" {
   version = "1.0.0"
 
   depends_on = [
-    aws_eks_cluster.eks-cluster,
-    aws_eks_node_group.node-ec2,
-  module.aws_vpc]
-  cluster_id = aws_eks_cluster.eks-cluster.id
+    module.AWS_EKS,
+    module.aws_vpc
+    ]
+  cluster_id = module.AWS_EKS.cluster_id
 }
 
 resource "local_file" "kubeconfig" {
   content  = module.eks-kubeconfig.kubeconfig
   filename = "kubeconfig_eks-cluster"
 }
+
