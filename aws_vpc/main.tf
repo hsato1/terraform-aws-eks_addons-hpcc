@@ -68,6 +68,7 @@ resource "aws_nat_gateway" "nats" {
 # PUBLIC ROUTE TABLE
 resource "aws_route_table" "public_table" {
   vpc_id = aws_vpc.main.id
+  depends_on = [aws_vpc.main]
 }
 
 resource "aws_route" "public_routes" {
@@ -86,6 +87,7 @@ resource "aws_route_table_association" "assoc_public_routes" {
 resource "aws_route_table" "private_tables" {
   count  = length(var.networking.azs)
   vpc_id = aws_vpc.main.id
+  depends_on = [aws_vpc.main]
 }
 
 resource "aws_route" "private_routes" {
@@ -93,6 +95,7 @@ resource "aws_route" "private_routes" {
   route_table_id         = aws_route_table.private_tables[count.index].id
   destination_cidr_block = "0.0.0.0/0"
   nat_gateway_id         = aws_nat_gateway.nats[count.index].id
+  # depends_on = [aws_nat_gateway.]
 }
 
 resource "aws_route_table_association" "assoc_private_routes" {

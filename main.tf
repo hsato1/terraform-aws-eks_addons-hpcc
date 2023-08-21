@@ -10,7 +10,9 @@ module "aws_eks" {
   aws_vpc_private_subnets_id = module.aws_vpc.private_subnets_id
   aws_vpc_security_groups_id = module.aws_vpc.security_groups_id
   tags = local.tags
-  depends_on = [module.aws_vpc]
+  depends_on = [
+    module.aws_vpc
+    ]
 }
 
 module "aws_efs" {

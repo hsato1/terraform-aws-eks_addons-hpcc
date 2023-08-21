@@ -15,10 +15,10 @@ variable "admin" {
 }
 
 
-variable "chart_path" {
-  type = string
+# variable "chart_path" {
+#   type = string
 
-}
+# }
 
 variable "cluster_name" {
   type    = string
