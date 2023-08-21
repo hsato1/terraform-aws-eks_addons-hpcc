@@ -131,8 +131,9 @@ Variables associated with the configuration of aws are:
 | Name | Description    | Type    | Default | Required |
 | :---:   | :---: | :---: |:---:|:---:|
 | cluster_name | name of the cluster to be created| string | eks-cluster| no | 
+| chart_path | path to the chart folder (locally or remotely) | string | - | yes | 
 
-
+**Important Note** Currently, this terraform modules and helm_release resource supports the static provisioning that has been worked on by other intern [Ryan Rao and his mentors, Wang Xiaoming, and Godji Fortil with HPCC version that their repo support](https://github.com/rrao4/HPCC-Platform/tree/HPCC-25955/helm/examples/efs). 
 ### Deploying a cluster
 
 1. First please make sure you have necessary providers cofigured by running:
