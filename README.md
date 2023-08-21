@@ -17,6 +17,7 @@ This module creates HPCC AWS EKS cluster, with EFS File System storage.
 1. AWS_VPC
 2. AWS_EKS
 3. AWS_EFS
+4. Kubernetes
 
 ### Supported Arguments
 ---
