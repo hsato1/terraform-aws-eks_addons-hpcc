@@ -7,8 +7,7 @@ This module creates AWS VPC with following resources
 - nat gateway
 - route
 - routetable
-
-  
+<br> 
 ***This module needs to be created first before any other modules***
 
 ### Input
