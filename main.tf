@@ -9,6 +9,7 @@ module "aws_eks" {
   aws_vpc_public_subnets_id = module.aws_vpc.public_subnets_id
   aws_vpc_private_subnets_id = module.aws_vpc.private_subnets_id
   aws_vpc_security_groups_id = module.aws_vpc.security_groups_id
+  ec2-node = var.ec2-node
   tags = local.tags
   depends_on = [
     module.aws_vpc
@@ -42,7 +43,8 @@ module "kubernetes_storage" {
 resource "helm_release" "hpcc" {
   # Doing this locally so this must be changed.
   name      = "hpcc"
-  chart     = "/Users/satouhiroshiki/Desktop/HPCCSystemInternship/HPCC-Platform/helm/hpcc"
+  chart = var.chart_path
+  #chart     = "/Users/satouhiroshiki/Desktop/HPCCSystemInternship/HPCC-Platform/helm/hpcc"
   namespace = "hpcc"
   timeout   = 300
   #repository = "https://hpcc-systems.github.io/helm-chart/"

@@ -54,14 +54,5 @@ variable "ec2-node" {
     capacity_type               = string
     disk_size                   = number
   })
-  default = {
-    node_group_name             = "default-node-group"
-    scaling_config_desired_size = 6
-    scaling_config_max_size     = 8
-    scaling_config_min_size     = 4
-    ami_type                    = "AL2_x86_64"
-    instance_types              = ["t3.medium"]
-    capacity_type               = "ON_DEMAND"
-    disk_size                   = 20
-  }
+  
 }

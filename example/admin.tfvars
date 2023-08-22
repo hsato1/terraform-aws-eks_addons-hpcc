@@ -16,3 +16,5 @@ networking =  {
 path = "/Users/satouhiroshiki/.aws"
 profile = "ida-cloud-ops"
 region = "us-east-1"
+
+chart_path = "/Users/satouhiroshiki/Desktop/HPCCSystemInternship/HPCC-Platform/helm/hpcc"
