@@ -1,5 +1,7 @@
 # AWS_EKS Module
 ---
+**Note that before this module, aws_vpc must be created and this module depends on it.**
+
 This module create
 - EKS cluster
 - EKS ec2 node group
