@@ -3,6 +3,8 @@
 # Overview 
 
 This module creates HPCC AWS EKS cluster, with EFS File System storage.
+***Important Note***
+We integrated the work by [Ryan Rao, Wang Xiaoming, and Godji Fortil ](https://github.com/rrao4/HPCC-Platform/tree/HPCC-25955/helm/examples/efs) for storageclass and persistent volumes however, we do install our EFS CSI Driver as a part of EKS addon. (Read more on [EKS ADDON](https://registry.terraform.io/providers/figma/aws-4-49-0/latest/docs/resources/eks_addon)
 
 
 ### Providers
