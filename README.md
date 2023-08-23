@@ -117,7 +117,34 @@ security_groups = [{
   }]
 ```
 
+#### ```ec2-node``` block ```Object```
 
+| Name | Description    | Type    | Default | 
+| :---:   | :---: | :---: |:---:|
+node_group_name | name of the node group | string | "default-node-group"
+scaling_config_desired_size | number of desired nodes in the group | number | 6
+scaling_config_max_size | maximum number of nodes in the group | number | 8
+scaling_config_min_size | minimum number of nodes in the group | number | 4
+ami_type | type of the amazon machine images to be used | string | "AL2_x86_64"
+instance_types | type of instances to be created inside the node | list(string) | ["t3.medium"]
+capacity_type | specifying that how we will be managing the resource and as a result how we will be chared. | string | "ON_DEMAND| 
+disk_size | specifying root device disk size for the node group instance | number | 20
+
+
+The example usage looks as follows:
+
+```
+ec2-node = {
+    node_group_name             = "default-node-group"
+    scaling_config_desired_size = 6
+    scaling_config_max_size     = 8
+    scaling_config_min_size     = 4
+    ami_type                    = "AL2_x86_64"
+    instance_types              = ["t3.medium"]
+    capacity_type               = "ON_DEMAND"
+    disk_size                   = 20
+  }
+```
 
 
 #### ***Note on AWS provider configuration*** 
