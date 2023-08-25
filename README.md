@@ -166,8 +166,12 @@ Variables associated with the configuration of aws are:
 | chart_path | path to the chart folder (locally or remotely) | string | - | yes | 
 
 **Important Note** Currently, this terraform modules and helm_release resource supports the static provisioning that has been worked on by other intern [Ryan Rao and his mentors, Wang Xiaoming, and Godji Fortil with HPCC version that their repo support](https://github.com/rrao4/HPCC-Platform/tree/HPCC-25955/helm/examples/efs). We have the static storage beyond Kubernetes. 
+
+**Update** Now the work has been merged to [HPCC-candidate 2.9.x](https://github.com/hpcc-systems/HPCC-Platform/tree/candidate-9.2.x) you may want to do a github cloning and check out a particular branch to be able to use this application. 
+
 ### Deploying a cluster
 
+Make sure that you have kubectl installed so that you can check if the services is up and running correctly. 
 1. First please make sure you have necessary providers cofigured by running:
 
 ```
@@ -178,5 +182,10 @@ terraform init
 
 ```
 terraform apply -var-file="example/admin.tfvars"
+```
+
+3. In order to destroy the infrastructure execute
+```
+terraform destroy -var-file="example/admin.tfvars"
 ```
 
