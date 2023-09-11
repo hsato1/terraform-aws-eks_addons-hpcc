@@ -9,6 +9,11 @@ This module creates HPCC AWS EKS cluster, with EFS File System storage.
 We integrated the work by [Ryan Rao, Wang Xiaoming, and Godji Fortil ](https://github.com/rrao4/HPCC-Platform/tree/HPCC-25955/helm/examples/efs) for storageclass and persistent volumes however, we do install our EFS CSI Driver as a part of EKS addon. (Read more on [EKS ADDON](https://registry.terraform.io/providers/figma/aws-4-49-0/latest/docs/resources/eks_addon))
 
 
+**Important Note** Currently, this terraform modules and helm_release resource supports the static provisioning that has been worked on by other intern [Ryan Rao and his mentors, Wang Xiaoming, and Godji Fortil with HPCC version that their repo support](https://github.com/rrao4/HPCC-Platform/tree/HPCC-25955/helm/examples/efs). We have the static storage beyond Kubernetes. 
+
+**Update** Now the work has been merged to [HPCC-candidate 2.9.x](https://github.com/hpcc-systems/HPCC-Platform/tree/candidate-9.2.x) you may want to do a github cloning and check out a particular branch to be able to use this application. 
+
+
 ### Providers
 ---
 
@@ -165,9 +170,7 @@ Variables associated with the configuration of aws are:
 | cluster_name | name of the cluster to be created| string | eks-cluster| no | 
 | chart_path | path to the chart folder (locally or remotely) | string | - | yes | 
 
-**Important Note** Currently, this terraform modules and helm_release resource supports the static provisioning that has been worked on by other intern [Ryan Rao and his mentors, Wang Xiaoming, and Godji Fortil with HPCC version that their repo support](https://github.com/rrao4/HPCC-Platform/tree/HPCC-25955/helm/examples/efs). We have the static storage beyond Kubernetes. 
 
-**Update** Now the work has been merged to [HPCC-candidate 2.9.x](https://github.com/hpcc-systems/HPCC-Platform/tree/candidate-9.2.x) you may want to do a github cloning and check out a particular branch to be able to use this application. 
 
 ### Deploying a cluster
 
